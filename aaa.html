@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Card for Janani</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .card-container {
+            width: 80%;
+            max-width: 400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-front {
+            background-color: #ffe4e1;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .card-front h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ff69b4;
+        }
+        
+        .card-front p {
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .card-inside {
+            padding: 20px;
+        }
+        
+        #show-more {
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        #show-more:hover {
+            background-color: #ff1493;
+        }
+        
+        #more-message {
+            margin-top: 20px;
+            display: none;
+            color: #555;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">
+                <h1>Sorry Janani</h1>
+                <p>I'm deeply sorry for what happened. You deserve so much better.</p>
+            </div>
+            <div class="card-inside">
+                <p>I promise to make it up to you and be a better friend from now on.</p>
+                <button id="show-more">Show More</button>
+                <div id="more-message">
+                    <p>I value our friendship so much, and I don't want anything to come between us. You are a wonderful person and a good friend, and you didn't deserve to be treated that way. I deeply regret my actions and any hurt or discomfort they may have caused you. I value our friendship and the positive impact you have on my life.</p>
+                    <p>Please know that I am working on managing my emotions better to ensure this doesn’t happen again. I hope you can find it in your heart to forgive me.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-more').addEventListener('click', function() {
+            var moreMessage = document.getElementById('more-message');
+            if (moreMessage.style.display === 'none' || moreMessage.style.display === '') {
+                moreMessage.style.display = 'block';
+                this.textContent = 'Show Less';
+            } else {
+                moreMessage.style.display = 'none';
+                this.textContent = 'Show More';
+            }
+        });
+    </script>
+</body>
+</html>
